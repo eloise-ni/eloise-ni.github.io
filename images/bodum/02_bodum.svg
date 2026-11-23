@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 936.85 559.13">
+  <!-- Generator: Adobe Illustrator 30.7.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 114)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9 {
+        stroke-width: 7.09px;
+      }
+
+      .st0, .st10, .st3, .st5, .st6 {
+        stroke-linejoin: round;
+      }
+
+      .st0, .st11 {
+        fill: #1d1e1b;
+      }
+
+      .st0, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9 {
+        stroke: #1d1d1b;
+      }
+
+      .st1 {
+        stroke: #9d9d9c;
+      }
+
+      .st1, .st10, .st5, .st6, .st9 {
+        fill: none;
+      }
+
+      .st1, .st2, .st4, .st7, .st8, .st9 {
+        stroke-miterlimit: 10;
+      }
+
+      .st12 {
+        fill: #f6f6f6;
+      }
+
+      .st13, .st3, .st8 {
+        fill: #1d1d1b;
+      }
+
+      .st10 {
+        stroke: #f6f6f6;
+        stroke-width: 5.01px;
+      }
+
+      .st2 {
+        fill: #575756;
+      }
+
+      .st3, .st6 {
+        stroke-linecap: round;
+      }
+
+      .st4, .st14 {
+        fill: #9d9d9c;
+      }
+
+      .st15 {
+        fill: #706f6f;
+      }
+
+      .st16 {
+        fill: #878787;
+      }
+
+      .st17 {
+        fill: #ededed;
+      }
+
+      .st7 {
+        fill: #c6c6c6;
+      }
+    </style>
+  </defs>
+  <g id="Fouet_à_lait_manuel">
+    <path class="st17" d="M317.33,340.18v124.32c0,22.14-17.95,40.08-40.08,40.08h-145.61c-22.69,0-41.08-18.39-41.08-41.08v-123.33h226.77,0Z"/>
+    <polygon class="st14" points="328.67 -51 334.34 -51 334.34 -51 328.67 -51"/>
+    <rect class="st4" x="198.28" y="175.77" width="11.34" height="158.74"/>
+    <line class="st1" x1="203.94" y1="425.22" x2="203.94" y2="340.18"/>
+    <path class="st3" d="M149,175.77h157v-51.02H101.9c0,28.18,21.09,51.02,47.1,51.02Z"/>
+    <rect class="st3" x="67.88" y="113.41" width="272.13" height="11.34"/>
+    <rect class="st8" x="192.61" y="73.72" width="22.68" height="34.02"/>
+    <path class="st6" d="M317.33,124.75v348.42c0,17.35-14.07,31.42-31.42,31.42H121.98c-17.35,0-31.42-14.07-31.42-31.42V164.43l-34.02-22.67,45.35-17.01h215.44Z"/>
+    <rect class="st6" x="323" y="164.43" width="11.34" height="22.68"/>
+    <rect class="st9" x="181.27" y="351.52" width="45.35" height="5.67"/>
+    <line class="st9" x1="147.25" y1="396.87" x2="260.64" y2="396.87"/>
+    <line class="st9" x1="147.25" y1="385.54" x2="169.93" y2="385.54"/>
+    <line class="st9" x1="237.96" y1="385.54" x2="260.64" y2="385.54"/>
+    <circle id="cercle" class="st13" cx="203.94" cy="374.2" r="5.67"/>
+    <g id="anse">
+      <path class="st6" d="M321.58,446.56v-20c64.82,0,117.56-54.01,117.56-120.39s-52.74-120.39-117.56-120.39v-20c75.85,0,137.56,62.98,137.56,140.39s-61.71,140.4-137.56,140.4h0Z"/>
+    </g>
+    <line id="couvercle" class="st9" x1="181.27" y1="385.54" x2="226.62" y2="385.54"/>
+    <rect class="st15" x="232.29" y="130.42" width="28.35" height="39.69"/>
+    <rect class="st16" x="147.25" y="130.42" width="28.35" height="39.69"/>
+    <polygon class="st3" points="147.25 68.06 147.25 62.39 203.94 51.05 260.64 62.39 260.64 68.06 147.25 68.06"/>
+    <polyline class="st9" points="90.56 340.18 203.94 340.18 317.33 340.18"/>
+    <polyline id="mousseur" class="st1" points="169.93 436.56 181.27 425.22 192.61 436.56 203.94 425.22 215.28 436.56 226.62 425.22 237.96 436.56"/>
+  </g>
+  <g id="Moulin_à_café_électrique">
+    <path class="st0" d="M615.87,164.44l-5.67,283.46s-11.34,0-11.34,11.34v45.35h249.45v-45.35s0-11.34-11.34-11.34l-5.67-283.46h-215.43Z"/>
+    <path class="st2" d="M706.57,340.93c0-6.68,3.59-12.99,9.57-15.97,2.13-1.06,4.61-1.77,7.44-1.77s5.31.71,7.44,1.77c5.98,2.99,9.57,9.29,9.57,15.97v55.22c0,6.68-3.59,12.99-9.57,15.97-2.13,1.06-4.61,1.77-7.44,1.77s-5.31-.71-7.44-1.77c-5.98-2.99-9.57-9.29-9.57-15.97v-55.22Z"/>
+    <circle class="st7" cx="723.58" cy="266.49" r="22.68"/>
+    <circle class="st7" cx="723.58" cy="405.39" r="14.17"/>
+    <path class="st9" d="M615.87,164.44V62.39s0-11.34,11.34-11.34h192.76s11.34,0,11.34,11.34v102.05h-215.44Z"/>
+    <circle class="st12" cx="723.58" cy="229.64" r="8.5"/>
+    <circle class="st16" cx="757.6" cy="246.65" r="8.5"/>
+    <circle class="st16" cx="689.57" cy="246.65" r="8.5"/>
+    <circle class="st12" cx="751.93" cy="334.52" r="5.67"/>
+    <circle class="st12" cx="751.93" cy="351.53" r="5.67"/>
+    <circle class="st12" cx="751.93" cy="368.54" r="5.67"/>
+    <circle class="st12" cx="751.93" cy="385.54" r="5.67"/>
+    <polyline class="st10" points="751.93 334.52 774.61 334.52 785.94 323.18"/>
+    <polyline class="st10" points="751.93 351.53 774.61 351.53 785.94 340.19"/>
+    <polyline class="st10" points="751.93 368.54 774.61 368.54 785.94 379.87"/>
+    <polyline class="st10" points="751.93 385.54 774.61 385.54 785.94 396.88"/>
+    <rect class="st7" x="615.87" y="102.08" width="215.43" height="62.36"/>
+    <path class="st11" d="M716.84,402.55h13.49c1.7,0,2.54,2.05,1.35,3.25l-5.25,5.25c-1.57,1.57-4.11,1.57-5.67,0l-5.25-5.25c-1.2-1.2-.35-3.25,1.35-3.25h-.02Z"/>
+    <rect class="st12" x="666.89" y="102.08" width="22.68" height="62.36"/>
+    <rect class="st12" x="757.6" y="102.08" width="22.68" height="62.36"/>
+    <line class="st5" x1="610.2" y1="447.91" x2="836.97" y2="447.91"/>
+    <rect class="st12" x="615.87" y="102.08" width="11.34" height="62.36"/>
+    <rect class="st15" x="712.24" y="102.08" width="22.68" height="62.36"/>
+    <rect class="st12" x="819.96" y="102.08" width="11.34" height="62.36"/>
+    <rect class="st5" x="615.87" y="102.08" width="215.43" height="62.36"/>
+    <circle class="st5" cx="723.58" cy="266.49" r="11.34"/>
+  </g>
+</svg>
