@@ -5,7 +5,7 @@
 
 
 body {
-  background-color: #F2F6FA;
+  background-color: #fefefe;
   color: black;
   font-family: jakarta ;
   max-width: 1920px;
@@ -390,6 +390,25 @@ header {
   color: rgba(0, 0, 0, 0.65);
 }
 
+.jde-page .project-info h1 {
+  color: rgb(17, 255, 0);
+}
+
+.kabane-page .project-info h1 {
+  color: rgba(130, 81, 44)
+}
+
+.leporello-page .project-info h1 {
+  color: rgba(34, 164, 57)
+}
+
+.lino-page .project-info h1 {
+  color: rgba(205, 23, 25)
+}
+
+.objets-page .project-info h1 {
+  color: rgba(104, 84, 205)
+}
 
 
 
@@ -525,6 +544,136 @@ body.faits-page {
 
 @media screen and (max-width: 600px) {
   .faits-page .project-info h1 {
+    font-size: 24px;
+  }
+}
+
+
+/* JDE MINUSCULE */
+
+body.jde-page {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.jde-page header {
+  display: block;
+}
+
+.jde-page main {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .jde-page .project-info h1 {
+    font-size: 24px;
+  }
+}
+
+
+/* KABANE CAFÉ */
+
+body.kabane-page {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.kabane-page header {
+  display: block;
+}
+
+.kabane-page main {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .kabane-page .project-info h1 {
+    font-size: 24px;
+  }
+}
+
+
+/* KABANE CAFÉ */
+
+body.kabane-page {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.kabane-page header {
+  display: block;
+}
+
+.kabane-page main {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .kabane-page .project-info h1 {
+    font-size: 24px;
+  }
+}
+
+
+/* LINO */
+
+body.lino {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.lino-page header {
+  display: block;
+}
+
+.lino-page main {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .lino-page .project-info h1 {
+    font-size: 24px;
+  }
+}
+
+
+/* OBJETS CROISÉES */
+
+objets.lino {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.objets-page header {
+  display: block;
+}
+
+.objets-page main {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .objets-page .project-info h1 {
     font-size: 24px;
   }
 }
