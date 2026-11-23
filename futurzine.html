@@ -22,7 +22,7 @@
             <div class="project-details">
                 <p>Édition</p>
                 <p>Technique : Risographie</p>
-                <p>Pages : 18 Pages</p>
+                <p>Pages : 18 pages</p>
                 <p>Format : 20 × 20 cm</p>
                 <p>Collaboration : Ann-May Martin & Patricia Parize</p>
             </div>
@@ -36,10 +36,71 @@
         </section>
 
         <section class="project-image">
-            <img src="" alt="Photos Futurzine">
+
+            <div class="futurzine-carousel">
+
+                <div class="futurzine-track">
+
+                    <div class="futurzine-slide">
+                        <img src="images/futurzine/futurr.jpg" alt="Futurzine - image 1">
+                    </div>
+
+                    <div class="futurzine-slide">
+                        <img src="images/futurzine/futurr2.jpg" alt="Futurzine - image 2">
+                    </div>
+
+                    <div class="futurzine-slide">
+                        <img src="images/futurzine/futurr3.jpg" alt="Futurzine - image 3">
+                    </div>
+
+                    <div class="futurzine-slide">
+                        <img src="images/futurzine/futurr4.jpg" alt="Futurzine - image 4">
+                    </div>
+
+                </div>
+
+                <div class="futurzine-controls">
+                    <button class="futurzine-prev" type="button" aria-label="Image précédente">←</button>
+                    <button class="futurzine-next" type="button" aria-label="Image suivante">→</button>
+                </div>
+
+            </div>
+
+            <div class="futurzine-counter">1 / 4</div>
+
+            <div class="futurzine-image-dessous">
+                <img src="images/futurzine/futurr5.jpg" alt="Futurzine - image supplémentaire">
+            </div>
+
         </section>
 
     </main>
+
+    <script>
+        const carousel = document.querySelector(".futurzine-carousel");
+        const track = carousel.querySelector(".futurzine-track");
+        const slides = carousel.querySelectorAll(".futurzine-slide");
+        const prev = carousel.querySelector(".futurzine-prev");
+        const next = carousel.querySelector(".futurzine-next");
+        const counter = document.querySelector(".futurzine-counter");
+
+        let currentSlide = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            counter.textContent = `${currentSlide + 1} / ${slides.length}`;
+        }
+
+        next.addEventListener("click", () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        });
+
+        prev.addEventListener("click", () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+    </script>
 
 </body>
 </html>

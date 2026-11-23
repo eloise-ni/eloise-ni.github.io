@@ -25,16 +25,103 @@
             <hr>
 
             <p>
-                Création d’un leporello pour la Semaine du Goût. Destiné aux jeunes lecteur·rices, il mêle approche scientifique et imaginaire pour faire découvrir le monde fascinant des champignons. Son format en losange se déploie pour créer un effet de surprise, tout en stimulant la curiosité et l’émerveillement.
+                Création d’un leporello pour la Semaine du Goût. Destiné aux jeunes lecteur·rices, il mêle approche
+                scientifique et imaginaire pour faire découvrir le monde fascinant des champignons. Son format en
+                losange se déploie pour créer un effet de surprise, tout en stimulant la curiosité et l’émerveillement.
             </p>
 
         </section>
 
+        <!-- CARROUSEL -->
         <section class="project-image">
-            <img src="images/leporello/00_leporello.jpg" alt="leporello">
+
+            <div class="leporello-carousel">
+
+                <div class="leporello-track">
+
+                    <div class="leporello-slide">
+                        <img src="images/leporello/leporelloo.jpg" alt="Leporello - image 1">
+                    </div>
+
+                    <div class="leporello-slide">
+                        <img src="images/leporello/leporelloo2.jpg" alt="Leporello - image 2">
+                    </div>
+
+                    <div class="leporello-slide">
+                        <img src="images/leporello/leporelloo3.jpg" alt="Leporello - image 3">
+                    </div>
+
+                    <div class="leporello-slide">
+                        <img src="images/leporello/leporelloo4.jpg" alt="Leporello - image 4">
+                    </div>
+
+                    <div class="leporello-slide">
+                        <img src="images/leporello/leporelloo5.jpg" alt="Leporello - image 5">
+                    </div>
+
+                    <div class="leporello-slide">
+                        <img src="images/leporello/leporelloo6.jpg" alt="Leporello - image 6">
+                    </div>
+
+                    <div class="leporello-slide">
+                        <img src="images/leporello/leporelloo7.jpg" alt="Leporello - image 7">
+                    </div>
+
+                    <div class="leporello-slide">
+                        <img src="images/leporello/leporelloo8.jpg" alt="Leporello - image 8">
+                    </div>
+
+                    <div class="leporello-slide">
+                        <img src="images/leporello/leporelloo9.jpg" alt="Leporello - image 9">
+                    </div>
+
+                    <div class="leporello-slide">
+                        <img src="images/leporello/leporelloo10.jpg" alt="Leporello - image 10">
+                    </div>
+
+                </div>
+
+                <div class="leporello-controls">
+
+                    <button class="leporello-prev" type="button" aria-label="Image précédente">←</button>
+
+                    <button class="leporello-next" type="button" aria-label="Image suivante">→</button>
+
+                </div>
+
+                <div class="leporello-counter">1 / 11</div>
+
+            </div>
+
         </section>
 
     </main>
+
+    <script>
+        const carousel = document.querySelector(".leporello-carousel");
+        const track = carousel.querySelector(".leporello-track");
+        const slides = carousel.querySelectorAll(".leporello-slide");
+        const prev = carousel.querySelector(".leporello-prev");
+        const next = carousel.querySelector(".leporello-next");
+        const counter = carousel.querySelector(".leporello-counter");
+
+        let currentSlide = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            counter.textContent = `${currentSlide + 1} / ${slides.length}`;
+        }
+
+        next.addEventListener("click", () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        });
+
+        prev.addEventListener("click", () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+    </script>
 
 </body>
 

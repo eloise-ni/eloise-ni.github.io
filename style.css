@@ -2,6 +2,10 @@
   font-family: jakarta ;
   src: url("typo/jakarta/PlusJakartaSans-Medium.otf") format("opentype");
 }
+@font-face {
+  font-family: feroniapi ;
+  src: url("typo/feroniapi/Feroniapi-MediumItalic.otf");
+}
 
 
 body {
@@ -459,30 +463,83 @@ body.propos-page {
   }
 }
 
-/* FLIP FLAP CIRCUS */
+
+/* FLIP FLAP CIRCUS — MISE EN PAGE ORDINATEUR */
 
 body.circus-page {
-  width: 100%;
-  max-width: none;
-  min-height: 100vh;
-  margin: 0;
-  padding: 10px;
-  background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 10px;
 }
 
-.circus-page header {
-  display: block;
+.circus-page .project-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    padding: 0;
+    min-height: calc(100vh - 20px);
 }
 
-.circus-page main {
-  width: 100%;
+.circus-page .project-info {
+    padding: 10px 20px 10px 10px;
+    border-right: 1px solid black;
 }
+
+.circus-page .project-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 10px;
+}
+
+.circus-page .project-image img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: calc(100vh - 40px);
+    object-fit: contain;
+    object-position: top center;
+    margin: 0;
+}
+
+
+/* FLIP FLAP CIRCUS — TÉLÉPHONE */
 
 @media screen and (max-width: 600px) {
-  .circus-page .project-info h1 {
-    font-size: 24px;
-  }
+
+    body.circus-page {
+        padding: 10px;
+    }
+
+    .circus-page .project-layout {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        min-height: auto;
+        padding: 0;
+    }
+
+    .circus-page .project-info {
+        padding: 10px;
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .circus-page .project-image {
+        width: 100%;
+        padding: 10px 0 0 0;
+    }
+
+    .circus-page .project-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
 }
+
 
 
 /* BODUM */
@@ -511,29 +568,185 @@ body.bodum-page {
 }
 
 
-/* 2463 - FUTURZINE */
+
+/* FUTURZINE — MISE EN PAGE */
 
 body.futurzine-page {
-  width: 100%;
-  max-width: none;
-  min-height: 100vh;
-  margin: 0;
-  padding: 10px;
-  background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px;
 }
 
-.futurzine-page header {
-  display: block;
+.futurzine-page .project-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    min-height: calc(100vh - 20px);
+    padding: 0;
 }
 
-.futurzine-page main {
-  width: 100%;
+.futurzine-page .project-info {
+    box-sizing: border-box;
+    padding: 10px 20px 10px 10px;
+    border-right: 1px solid black;
 }
+
+/* COLONNE DES IMAGES */
+
+.futurzine-page .project-image {
+    display: block;
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 10px;
+}
+
+/* CARROUSEL */
+
+.futurzine-carousel {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.futurzine-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.4s ease;
+}
+
+.futurzine-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.futurzine-slide img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: calc(100vh - 80px);
+    object-fit: contain;
+    object-position: top center;
+    margin: 0;
+}
+
+/* FLÈCHES */
+
+.futurzine-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.futurzine-controls button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: #fefefe;
+    color: black;
+    font-family: feroniapi;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* COMPTEUR */
+
+.futurzine-counter {
+    font-family: jakarta;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* IMAGE SOUS LE CARROUSEL */
+
+.futurzine-image-dessous {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.futurzine-image-dessous img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* TÉLÉPHONE */
 
 @media screen and (max-width: 600px) {
-  .futurzine-page .project-info h1 {
-    font-size: 24px;
-  }
+
+    body.futurzine-page {
+        padding: 10px;
+    }
+
+    .futurzine-page .project-layout {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        min-height: auto;
+        padding: 0;
+    }
+
+    .futurzine-page .project-info {
+        padding: 10px;
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .futurzine-page .project-info h1 {
+        font-size: 24px;
+    }
+
+    .futurzine-page .project-image {
+        width: 100%;
+        padding: 10px 0 0 0;
+    }
+
+    .futurzine-slide img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .futurzine-controls {
+        padding: 0 5px;
+    }
+
+    .futurzine-controls button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .futurzine-counter {
+        font-size: 12px;
+    }
+
+    .futurzine-image-dessous {
+        margin-top: 20px;
+    }
 }
 
 
@@ -615,31 +828,171 @@ body.kabane-page {
 }
 
 
-/* KABANE CAFÉ */
+/* LEPORELLO — MISE EN PAGE */
 
-body.kabane-page {
-  width: 100%;
-  max-width: none;
-  min-height: 100vh;
-  margin: 0;
-  padding: 10px;
-  background-color: rgb(255, 255, 255);
+body.leporello-page {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px;
 }
 
-.kabane-page header {
-  display: block;
+.leporello-page .project-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    min-height: calc(100vh - 20px);
+    padding: 0;
 }
 
-.kabane-page main {
-  width: 100%;
+.leporello-page .project-info {
+    box-sizing: border-box;
+    padding: 10px 20px 10px 10px;
+    border-right: 1px solid black;
 }
+
+/* CARROUSEL */
+
+.leporello-page .project-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 10px;
+}
+
+.leporello-carousel {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.leporello-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.4s ease;
+}
+
+.leporello-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.leporello-slide img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: calc(100vh - 80px);
+    object-fit: contain;
+    object-position: top center;
+    margin: 0;
+}
+
+/* FLÈCHES */
+
+.leporello-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.leporello-controls button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: #fefefe;
+    color: black;
+    font-family: "Feroniapi";
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* COMPTEUR */
+
+.leporello-counter {
+    font-family: jakarta;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* TÉLÉPHONE */
 
 @media screen and (max-width: 600px) {
-  .kabane-page .project-info h1 {
-    font-size: 24px;
-  }
+
+    body.leporello-page {
+        padding: 10px;
+    }
+
+    .leporello-page .project-layout {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        min-height: auto;
+        padding: 0;
+    }
+
+    .leporello-page .project-info {
+        padding: 10px;
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .leporello-page .project-info h1 {
+        font-size: 24px;
+    }
+
+    .leporello-page .project-image {
+        width: 100%;
+        padding: 10px 0 0 0;
+    }
+
+    .leporello-slide img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .leporello-controls {
+        padding: 0 5px;
+    }
+
+    .leporello-controls button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .leporello-counter {
+        font-size: 12px;
+    }
 }
 
+
+
+  
 
 /* LINO */
 
