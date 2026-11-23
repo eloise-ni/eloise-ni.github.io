@@ -9,7 +9,9 @@
 </head>
 
 <body class="project-page leporello-page">
-
+<header class="project-banner">
+    <span class="banner-name">Eloïse Ni</span>
+</header>
     <main class="project-layout">
 
         <section class="project-info">
@@ -88,9 +90,6 @@
                     <button class="leporello-next" type="button" aria-label="Image suivante">→</button>
 
                 </div>
-
-                <div class="leporello-counter">1 / 11</div>
-
             </div>
 
         </section>
@@ -98,30 +97,29 @@
     </main>
 
     <script>
-        const carousel = document.querySelector(".leporello-carousel");
-        const track = carousel.querySelector(".leporello-track");
-        const slides = carousel.querySelectorAll(".leporello-slide");
-        const prev = carousel.querySelector(".leporello-prev");
-        const next = carousel.querySelector(".leporello-next");
-        const counter = carousel.querySelector(".leporello-counter");
+    const carousel = document.querySelector(".leporello-carousel");
+    const track = carousel.querySelector(".leporello-track");
+    const slides = carousel.querySelectorAll(".leporello-slide");
+    const prev = carousel.querySelector(".leporello-prev");
+    const next = carousel.querySelector(".leporello-next");
 
-        let currentSlide = 0;
+    let currentSlide = 0;
 
-        function updateCarousel() {
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
-            counter.textContent = `${currentSlide + 1} / ${slides.length}`;
-        }
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
 
-        next.addEventListener("click", () => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            updateCarousel();
-        });
+    next.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateCarousel();
+    });
 
-        prev.addEventListener("click", () => {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            updateCarousel();
-        });
-    </script>
+    prev.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+</script>
+
 
 </body>
 

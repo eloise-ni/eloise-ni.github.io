@@ -9,7 +9,9 @@
 </head>
 
 <body class="project-page reliure-page">
-
+<header class="project-banner">
+    <span class="banner-name">Eloïse Ni</span>
+</header>
     <main class="project-layout">
 
         <section class="project-info">
@@ -20,8 +22,8 @@
 
             <div class="project-details">
                 <p>Édition</p>
-                <p>Technique : Reliure japonaise </p>
-                <p>Pages : 10 Pages</p>
+                <p>Technique : Reliure japonaise</p>
+                <p>Pages : 10 pages</p>
                 <p>Format : 14 × 25 cm</p>
             </div>
 
@@ -30,16 +32,100 @@
             <p>
                 Ce livre-objet invite à découvrir la cétoine dorée à travers une expérience sensorielle fondée sur le
                 dévoilement. Son format allongé, ses motifs végétaux et ses jeux de lumière font écho à l’environnement
-                naturel de l’insecte, tout en guidant le lecteur vers la révélation finale du scarabée. </p>
+                naturel de l’insecte, tout en guidant le lecteur vers la révélation finale du scarabée.
+            </p>
+
+            <hr>
+
+            <div class="project-poem">
+                <p>Dans l’obscurité de la nuit, je me laisse guider par les feuillages qui s’agitent au vent pour
+                    retrouver le scarabée sacré.</p>
+
+                <p>Ce soir-là, la forêt exhale un fort parfum de sous-bois. Derrière les troncs se devinent quelques
+                    éclats dans la pénombre.</p>
+
+                <p>Puis le jour commence à se lever. Les rayons chauds de l’aube dessinent dans le ciel des ailes
+                    fragiles.</p>
+
+                <p>La voilà. La Cétoine dorée se révèle enfin au soleil d’été.</p>
+            </div>
 
         </section>
 
         <section class="project-image">
-            <img src="" alt="photomontage">
+
+            <div class="reliure-carousel">
+
+                <div class="reliure-track">
+
+                    <div class="reliure-slide">
+                        <img src="images/reliure/reliuree.jpg" alt="Cétoine dorée - image 1">
+                    </div>
+
+                    <div class="reliure-slide">
+                        <img src="images/reliure/reliuree2.jpg" alt="Cétoine dorée - image 2">
+                    </div>
+
+                    <div class="reliure-slide">
+                        <img src="images/reliure/reliuree3.jpg" alt="Cétoine dorée - image 3">
+                    </div>
+
+                    <div class="reliure-slide">
+                        <img src="images/reliure/reliuree4.jpg" alt="Cétoine dorée - image 4">
+                    </div>
+
+                    <div class="reliure-slide">
+                        <img src="images/reliure/reliuree5.jpg" alt="Cétoine dorée - image 5">
+                    </div>
+
+                    <div class="reliure-slide">
+                        <img src="images/reliure/reliuree6.jpg" alt="Cétoine dorée - image 6">
+                    </div>
+
+                    <div class="reliure-slide">
+                        <img src="images/reliure/reliuree7.jpg" alt="Cétoine dorée - image 7">
+                    </div>
+
+                </div>
+
+                <div class="reliure-controls">
+                    <button class="reliure-prev" type="button" aria-label="Image précédente">←</button>
+                    <button class="reliure-next" type="button" aria-label="Image suivante">→</button>
+                </div>
+
+            </div>
+
         </section>
 
     </main>
 
+    <script>
+        const carousel = document.querySelector(".reliure-carousel");
+        const track = carousel.querySelector(".reliure-track");
+        const slides = carousel.querySelectorAll(".reliure-slide");
+        const prev = carousel.querySelector(".reliure-prev");
+        const next = carousel.querySelector(".reliure-next");
+        const counter = document.querySelector(".reliure-counter");
+
+        let currentSlide = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            counter.textContent = `${currentSlide + 1} / ${slides.length}`;
+        }
+
+        next.addEventListener("click", () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        });
+
+        prev.addEventListener("click", () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+    </script>
+
 </body>
+
 
 </html>
