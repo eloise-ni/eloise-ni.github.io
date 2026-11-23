@@ -192,7 +192,7 @@ header {
 }
 
 .noirr-platon .image-text {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.70);
 }
 
 .overlay {
@@ -410,7 +410,21 @@ header {
   color: rgba(104, 84, 205)
 }
 
+.reliure-page .project-info h1 {
+  color: rgba(5, 90, 28)
+}
 
+.symbiose-page .project-info h1 {
+  color: rgba(141, 190, 35)
+}
+
+.sauces-page .project-info h1 {
+  color: rgba(237, 109, 4)
+}
+
+.platon-page .project-info h1 {
+  color: rgba(0, 0, 0, 0.65)
+}
 
 
 
@@ -655,7 +669,7 @@ body.lino {
 
 /* OBJETS CROISÉES */
 
-objets.lino {
+body.objets {
   width: 100%;
   max-width: none;
   min-height: 100vh;
@@ -677,3 +691,109 @@ objets.lino {
     font-size: 24px;
   }
 }
+
+/* RELIURE */
+
+body.reliure {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.reliure-page header {
+  display: block;
+}
+
+.reliure-page main {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .reliure-page .project-info h1 {
+    font-size: 24px;
+  }
+}
+
+
+/* SYMBIOSE */
+
+body.symbiose {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.symbiose-page header {
+  display: block;
+}
+
+.symbiose-page main {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .symbiose-page .project-info h1 {
+    font-size: 24px;
+  }
+}
+
+
+
+/* SAUCES */
+
+body.sauces {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.sauces-page header {
+  display: block;
+}
+
+.sauces-page main {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .sauces-page .project-info h1 {
+    font-size: 24px;
+  }
+}
+
+
+
+/* PLATON */
+
+body.platon {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.platon-page header {
+  display: block;
+}
+
+.platon-page main {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .platon-page .project-info h1 {
+    font-size: 24px;
+  }
+}
+
