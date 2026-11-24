@@ -12,15 +12,9 @@
 <body>
 <header class="project-banner">
     <span class="banner-name">Eloïse Ni</span>
+    <a href="a_propos.html" class="banner-link">À propos</a>
 </header>
     <main>
-        <div class="grid-image-centrale">
-            <a class="image-container bleu-propos" href="a_propos.html">
-                <img src="images/00_a_propos.jpg" alt="À propos">
-                <p class="image-text">À propos</p>
-            </a>
-        </div>
-
         
         <div class="grid">
 
@@ -92,6 +86,50 @@
         </div>
 
     </main>
+
+
+<script>
+const banner = document.querySelector(".project-banner");
+
+const projectColors = {
+    "rouge-flip": "rgb(195, 23, 0)",
+    "gris-bodum": "rgb(100, 100, 100)",
+    "bleu-futurzine": "rgb(39, 62, 142)",
+    "noir-faits": "rgb(100, 100, 100)",
+    "vert-fluo": "rgb(17, 255, 0)",
+    "marron-kabane": "rgb(130, 81, 44)",
+    "jaune-leporello": "rgb(34, 164, 57)",
+    "rouge-lino": "rgb(205, 23, 25)",
+    "violet-objets": "rgb(104, 84, 205)",
+    "vert-reliure": "rgb(5, 90, 28)",
+    "vert-symbiose": "rgb(141, 190, 35)",
+    "orange-sauces": "rgb(237, 109, 4)",
+    "noirr-platon": "rgb(100, 100, 100)",
+    "bleu-propos": "#0059a6"
+};
+
+const initialColor = "rgb(100, 100, 100)";
+
+document.querySelectorAll(".image-container").forEach(project => {
+
+    project.addEventListener("mouseenter", () => {
+        for (const className in projectColors) {
+            if (project.classList.contains(className)) {
+                banner.style.backgroundColor = projectColors[className];
+                break;
+            }
+        }
+    });
+
+    project.addEventListener("mouseleave", () => {
+        banner.style.backgroundColor = initialColor;
+    });
+
+});
+</script>
+</body>
+</html>
+
 </body>
 
 

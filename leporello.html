@@ -9,9 +9,9 @@
 </head>
 
 <body class="project-page leporello-page">
-<header class="project-banner">
-    <span class="banner-name">Eloïse Ni</span>
-</header>
+    <header class="project-banner">
+        <span class="banner-name">Eloïse Ni</span>
+    </header>
     <main class="project-layout">
 
         <section class="project-info">
@@ -21,20 +21,21 @@
             <hr>
 
             <div class="project-details">
-                <p>Technique : Logo vectoriel, Aquarelle</p>
+                <p>Édition</p>
+                <p>Technique : Technique mixte</p>
+                <p>Pages : 6 Pages</p>
+                <p>Format : 10,5 × 10,5 cm</p>
             </div>
-
             <hr>
 
             <p>
-                Création d’un leporello pour la Semaine du Goût. Destiné aux jeunes lecteur·rices, il mêle approche
+                Création d’un leporello pour la Semaine du Goût. Destiné aux jeunes lecteur·rices, il mélange une approche
                 scientifique et imaginaire pour faire découvrir le monde fascinant des champignons. Son format en
                 losange se déploie pour créer un effet de surprise, tout en stimulant la curiosité et l’émerveillement.
             </p>
 
         </section>
 
-        <!-- CARROUSEL -->
         <section class="project-image">
 
             <div class="leporello-carousel">
@@ -97,28 +98,28 @@
     </main>
 
     <script>
-    const carousel = document.querySelector(".leporello-carousel");
-    const track = carousel.querySelector(".leporello-track");
-    const slides = carousel.querySelectorAll(".leporello-slide");
-    const prev = carousel.querySelector(".leporello-prev");
-    const next = carousel.querySelector(".leporello-next");
+        const carousel = document.querySelector(".leporello-carousel");
+        const track = carousel.querySelector(".leporello-track");
+        const slides = carousel.querySelectorAll(".leporello-slide");
+        const prev = carousel.querySelector(".leporello-prev");
+        const next = carousel.querySelector(".leporello-next");
 
-    let currentSlide = 0;
+        let currentSlide = 0;
 
-    function updateCarousel() {
-        track.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
 
-    next.addEventListener("click", () => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateCarousel();
-    });
+        next.addEventListener("click", () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        });
 
-    prev.addEventListener("click", () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        updateCarousel();
-    });
-</script>
+        prev.addEventListener("click", () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+    </script>
 
 
 </body>
