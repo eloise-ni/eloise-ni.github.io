@@ -974,7 +974,9 @@ header.project-banner {
 }
 
 .site-footer {
-    padding: 20px 25px;
+    border-top: 1px solid black;
+    margin: 20px 10px 0;
+    padding: 15px 0 20px;
     font-family: jakarta-light;
     font-size: 13px;
     line-height: 1.4;
@@ -986,8 +988,9 @@ header.project-banner {
     color: black;
 }
 
-.site-footer hr {
-    border: none;
-    border-top: 1px solid black;
-    margin: 0 0 15px;
+.project-page .site-footer,
+.propos-page .site-footer {
+    margin-left: 0;
+    margin-right: 0;
 }
+
